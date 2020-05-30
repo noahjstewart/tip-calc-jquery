@@ -17,6 +17,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Tip Calculator",
+      filename: "index.html",
+      template: "src/html/index.html",
+      inject: "head",
       favicon: path.resolve(__dirname, "src/img/favicon.ico"),
     }),
   ],
