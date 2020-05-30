@@ -1,0 +1,8 @@
+#calculator {
+  height: 35em;
+  width: 22em;
+  background-color: white;
+  color: #303031;
+  border-radius: 2px;
+  padding: 3vh 3vw 3vh 3vw;
+}

@@ -2,7 +2,8 @@ import $ from "jquery";
 import "./main.css";
 
 import { Calculator } from "./Calculator";
+import "./calculator.css";
 
 $(document).ready(() => {
-  console.log("document ready");
+  new Calculator("#calculator");
 });
