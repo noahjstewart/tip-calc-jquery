@@ -15,7 +15,7 @@ export const Calculator = function (sel) {
         <label for="bill">Tip Percent:</label>
         <input type="number" id="tip" value="20">
       </p>
-      <p style="padding-top: 0.5em">
+      <p style="padding-top: 1em">
         <input id="calculate" type="submit" value="Calculate">
       </p>
     </form>
