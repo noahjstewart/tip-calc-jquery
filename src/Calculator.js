@@ -7,15 +7,15 @@ export const Calculator = function (sel) {
 
   this.form = this.div.find("#form").html(`
     <form>
-      <p>
+      <p class="spread">
         <label for="bill">Bill Amount:</label>
         <input type="text" id="bill" required>
       </p>
-      <p>
+      <p class="spread">
         <label for="bill">Tip Percent:</label>
         <input type="number" id="tip" value="20">
       </p>
-      <p>
+      <p style="padding-top: 0.5em">
         <input id="calculate" type="submit" value="Calculate">
       </p>
     </form>
@@ -30,6 +30,7 @@ export const Calculator = function (sel) {
   });
 
   this.calculate = function () {
+    // error checking
     var billAmount = parseFloat($("#bill").val());
     if (isNaN(billAmount)) {
       this.addError("Bill amount must be a number");
@@ -46,6 +47,7 @@ export const Calculator = function (sel) {
       this.errornous = true;
     }
 
+    // no errors
     if (!this.errornous) {
       var tipAmount = (billAmount * tipPercent).toFixed(2);
       var totalAmount = (billAmount + parseFloat(tipAmount)).toFixed(2);
@@ -53,11 +55,11 @@ export const Calculator = function (sel) {
       var resultHtml = `
       <div class="spread">
         <p>Tip Amount:</p>
-        <p>$${tipAmount}</p>
+        <p class="value">$${tipAmount}</p>
       </div>
       <div class="spread">
         <p>Total Amount:</p>
-        <p>$${totalAmount}</p>
+        <p class="value">$${totalAmount}</p>
       </div>
       `;
 
