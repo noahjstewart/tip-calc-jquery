@@ -16,7 +16,7 @@ export const Calculator = function (sel) {
         <input type="number" id="tip" value="20">
       </p>
       <p style="padding-top: 1em">
-        <input id="calculate" type="submit" value="Calculate">
+        <button id="calculate" type="submit"><i class="fas fa-dollar-sign"></i>&nbsp;Calculate</button>
       </p>
     </form>
   `);
