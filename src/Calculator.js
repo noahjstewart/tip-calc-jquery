@@ -26,6 +26,7 @@ export const Calculator = function (sel) {
     if (that.errornous) {
       that.resetErrors();
     }
+    that.resetResult();
     that.calculate();
   });
 
@@ -75,6 +76,10 @@ export const Calculator = function (sel) {
   this.resetForm = function () {
     $("#bill").val("");
     $("#tip").val(20);
+  };
+
+  this.resetResult = function () {
+    $("#result").empty();
   };
 
   this.addError = function (msg) {
